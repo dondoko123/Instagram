@@ -13,6 +13,11 @@
 		7A91E58023AFB8DE00C2B418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A91E57E23AFB8DE00C2B418 /* Main.storyboard */; };
 		7A91E58223AFB8E000C2B418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A91E58123AFB8E000C2B418 /* Assets.xcassets */; };
 		7A91E58523AFB8E100C2B418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A91E58323AFB8E100C2B418 /* LaunchScreen.storyboard */; };
+		7A91E58D23AFBA2A00C2B418 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91E58C23AFBA2A00C2B418 /* LoginViewController.swift */; };
+		7A91E58F23AFBA3D00C2B418 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91E58E23AFBA3D00C2B418 /* HomeViewController.swift */; };
+		7A91E59123AFBA5400C2B418 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91E59023AFBA5400C2B418 /* ImageSelectViewController.swift */; };
+		7A91E59323AFBA5E00C2B418 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91E59223AFBA5E00C2B418 /* PostViewController.swift */; };
+		7A91E59523AFBA6C00C2B418 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91E59423AFBA6C00C2B418 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7A91E58123AFB8E000C2B418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A91E58423AFB8E100C2B418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A91E58623AFB8E100C2B418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A91E58C23AFBA2A00C2B418 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7A91E58E23AFBA3D00C2B418 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7A91E59023AFBA5400C2B418 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
+		7A91E59223AFBA5E00C2B418 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		7A91E59423AFBA6C00C2B418 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				7A91E58123AFB8E000C2B418 /* Assets.xcassets */,
 				7A91E58323AFB8E100C2B418 /* LaunchScreen.storyboard */,
 				7A91E58623AFB8E100C2B418 /* Info.plist */,
+				7A91E58C23AFBA2A00C2B418 /* LoginViewController.swift */,
+				7A91E58E23AFBA3D00C2B418 /* HomeViewController.swift */,
+				7A91E59023AFBA5400C2B418 /* ImageSelectViewController.swift */,
+				7A91E59223AFBA5E00C2B418 /* PostViewController.swift */,
+				7A91E59423AFBA6C00C2B418 /* SettingViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -138,6 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A91E59123AFBA5400C2B418 /* ImageSelectViewController.swift in Sources */,
+				7A91E58F23AFBA3D00C2B418 /* HomeViewController.swift in Sources */,
+				7A91E59323AFBA5E00C2B418 /* PostViewController.swift in Sources */,
+				7A91E59523AFBA6C00C2B418 /* SettingViewController.swift in Sources */,
+				7A91E58D23AFBA2A00C2B418 /* LoginViewController.swift in Sources */,
 				7A91E57D23AFB8DE00C2B418 /* ViewController.swift in Sources */,
 				7A91E57923AFB8DE00C2B418 /* AppDelegate.swift in Sources */,
 				7A91E57B23AFB8DE00C2B418 /* SceneDelegate.swift in Sources */,
@@ -294,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.iru.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.iru.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
