@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Instagram
-//
-//  Created by 李東一 on 2019/12/22.
-//  Copyright © 2019 iru. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,6 +10,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window = self.window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
