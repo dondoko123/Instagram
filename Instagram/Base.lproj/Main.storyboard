@@ -30,14 +30,54 @@
                     <view key="view" contentMode="scaleToFill" id="xoj-2o-Irn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-QN-A4Q">
+                                <rect key="frame" x="57" y="124" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="xgd-lF-rfR"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="6vN-hl-MTx" eventType="touchUpInside" id="9rX-9g-ihb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6Z-I1-Qcf">
+                                <rect key="frame" x="57" y="174" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gFV-ax-Gwn"/>
+                                </constraints>
+                                <state key="normal" title="カメラ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="6vN-hl-MTx" eventType="touchUpInside" id="Lpr-Q4-ES8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRr-Zr-y8t">
+                                <rect key="frame" x="57" y="224" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KmG-5r-fqj"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="6vN-hl-MTx" eventType="touchUpInside" id="3rK-yp-yEo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MRr-Zr-y8t" firstAttribute="centerX" secondItem="xoj-2o-Irn" secondAttribute="centerX" id="9k3-qa-ZK8"/>
+                            <constraint firstItem="7qG-QN-A4Q" firstAttribute="top" secondItem="aZS-7j-bhv" secondAttribute="top" constant="80" id="G3f-xz-vlR"/>
+                            <constraint firstItem="q6Z-I1-Qcf" firstAttribute="centerX" secondItem="xoj-2o-Irn" secondAttribute="centerX" id="auZ-v7-T4E"/>
+                            <constraint firstItem="7qG-QN-A4Q" firstAttribute="centerX" secondItem="xoj-2o-Irn" secondAttribute="centerX" id="bdP-zq-jiR"/>
+                            <constraint firstItem="MRr-Zr-y8t" firstAttribute="top" secondItem="q6Z-I1-Qcf" secondAttribute="bottom" constant="10" id="cVY-1H-eI9"/>
+                            <constraint firstItem="q6Z-I1-Qcf" firstAttribute="top" secondItem="7qG-QN-A4Q" secondAttribute="bottom" constant="10" id="w4B-Hu-kfq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aZS-7j-bhv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="投稿" image="camera" id="61B-uf-MgM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRP-Wz-F8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="899"/>
+            <point key="canvasLocation" x="137.68115942028987" y="898.66071428571422"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="u6w-SG-J8f">
