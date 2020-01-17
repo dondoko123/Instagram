@@ -1,7 +1,8 @@
 import UIKit
+import CLImageEditor
 
 class ImageSelectViewController: UIViewController,
-UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,10 +14,24 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         if info[.originalImage] != nil {
             let image = info[.originalImage] as! UIImage
             print("DEBUG_PRINT: image = \(image)")
+            
+            let editor = CLImageEditor(image: image)!
+            editor.delegate = self
+            picker.present(editor, animated: true, completion: nil)
         }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
+        let postViewController = self.storyboard?.instantiateViewController(identifier: "Post") as! PostViewController
+        postViewController.image = image!
+        editor.present(postViewController, animated: true, completion: nil)
+    }
+    
+    func imageEditorDidCancel(_ editor: CLImageEditor!) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     

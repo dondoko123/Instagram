@@ -14,10 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="VDn-mZ-LM8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xHs-YM-pLz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xHs-YM-pLz" firstAttribute="top" secondItem="2Ne-wK-cFN" secondAttribute="top" id="3N5-K5-spd"/>
+                            <constraint firstItem="2Ne-wK-cFN" firstAttribute="trailing" secondItem="xHs-YM-pLz" secondAttribute="trailing" id="7Ot-Tf-GcO"/>
+                            <constraint firstItem="2Ne-wK-cFN" firstAttribute="bottom" secondItem="xHs-YM-pLz" secondAttribute="bottom" id="Tw0-SB-Jqw"/>
+                            <constraint firstItem="xHs-YM-pLz" firstAttribute="leading" secondItem="2Ne-wK-cFN" secondAttribute="leading" id="vMg-77-fhZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Ne-wK-cFN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="RkJ-zO-aZ9"/>
+                    <connections>
+                        <outlet property="tableView" destination="xHs-YM-pLz" id="QYF-Yp-Vcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9W-Ss-VMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,9 +101,58 @@
                     <view key="view" contentMode="scaleToFill" id="swO-lB-Puk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="shT-yO-5FC">
+                                <rect key="frame" x="10" y="64" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Bg3-4Y-Spg"/>
+                                    <constraint firstAttribute="height" constant="120" id="fvo-8d-kAO"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キャプション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-P2-4zv">
+                                <rect key="frame" x="140" y="150" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3Z-oZ-aRK">
+                                <rect key="frame" x="57" y="254" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="69Y-kR-gvW"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="0e8-Zr-mm1" eventType="touchUpInside" id="v0x-ZT-I4W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7W1-Fu-1Fx">
+                                <rect key="frame" x="57" y="204" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="AfO-3w-3T7"/>
+                                </constraints>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="0e8-Zr-mm1" eventType="touchUpInside" id="7U9-Nr-kQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="shT-yO-5FC" firstAttribute="top" secondItem="rZe-sK-lXk" secondAttribute="top" constant="20" id="4L8-ey-WyL"/>
+                            <constraint firstItem="J3Z-oZ-aRK" firstAttribute="centerX" secondItem="swO-lB-Puk" secondAttribute="centerX" id="8xg-Cc-0Jo"/>
+                            <constraint firstItem="shT-yO-5FC" firstAttribute="leading" secondItem="rZe-sK-lXk" secondAttribute="leading" constant="10" id="HGn-6t-V73"/>
+                            <constraint firstItem="rZe-sK-lXk" firstAttribute="trailing" secondItem="1RZ-P2-4zv" secondAttribute="trailing" constant="10" id="SK5-3G-O6Q"/>
+                            <constraint firstItem="7W1-Fu-1Fx" firstAttribute="centerX" secondItem="swO-lB-Puk" secondAttribute="centerX" id="V0t-HC-1EW"/>
+                            <constraint firstItem="1RZ-P2-4zv" firstAttribute="leading" secondItem="shT-yO-5FC" secondAttribute="trailing" constant="10" id="a8M-Qw-6pf"/>
+                            <constraint firstItem="J3Z-oZ-aRK" firstAttribute="top" secondItem="7W1-Fu-1Fx" secondAttribute="bottom" constant="10" id="dAN-7c-Mwv"/>
+                            <constraint firstItem="1RZ-P2-4zv" firstAttribute="bottom" secondItem="shT-yO-5FC" secondAttribute="bottom" id="pAf-lA-PnE"/>
+                            <constraint firstItem="7W1-Fu-1Fx" firstAttribute="top" secondItem="shT-yO-5FC" secondAttribute="bottom" constant="20" id="vH9-jr-wXF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rZe-sK-lXk"/>
                     </view>
+                    <connections>
+                        <outlet property="UITextField" destination="1RZ-P2-4zv" id="zQ9-1v-tKL"/>
+                        <outlet property="imageView" destination="shT-yO-5FC" id="3q1-xZ-w88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCw-uq-OIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
